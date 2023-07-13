@@ -53,7 +53,6 @@ class Car {
             this.id = uuidV4();
             this.available = true;
         }
-
     }
 }
 
