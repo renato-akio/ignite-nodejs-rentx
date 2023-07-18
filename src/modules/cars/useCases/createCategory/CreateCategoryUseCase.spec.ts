@@ -38,7 +38,6 @@ describe("Create Categoryy", () => {
 
         const categoryCreated = await categoriesRepositoryInMemory.findByName(category.name);
 
-        console.log(categoryCreated);
         expect(categoryCreated).toHaveProperty("id");
     });
 
