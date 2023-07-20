@@ -1,6 +1,6 @@
 import { container } from "tsyringe";
 import {Request, Response} from "express";
-import { DevolutionRentalUseCase } from "./DevolutionrentalUseCase";
+import { DevolutionRentalUseCase } from "./DevolutionRentalUseCase";
 
 class DevolutionRentalController {
     async handle(request:Request, response: Response):Promise<Response>{
