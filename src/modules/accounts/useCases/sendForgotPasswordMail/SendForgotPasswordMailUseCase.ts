@@ -1,3 +1,4 @@
+import "reflect-metadata"
 import { inject, injectable } from "tsyringe";
 import { v4 as uuidV4 } from "uuid";
 import { resolve } from "path";
