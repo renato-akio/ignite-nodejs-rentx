@@ -11,7 +11,7 @@ let connection: Connection;
 
 describe("List Category Controller", () => {
     beforeAll(async () => {
-        connection = await createConnection();
+        connection = await createConnection("database");
         await connection.runMigrations();
 
         const id = uuid();
@@ -36,13 +36,13 @@ describe("List Category Controller", () => {
             password: "admin"
         });
 
-        const { refresh_token} = responseToken.body;
+        const { token } = responseToken.body;
 
         await request(app).post("/categories").send({
             name: "Category Supertest",
             description: "Category Supertest"
         }).set({
-            Authorization: `Bearer ${refresh_token}`
+            Authorization: `Bearer ${token}`
         })
 
         const response = await request(app).get("/categories");
