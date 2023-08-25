@@ -18,4 +18,4 @@ router.use(authenticateRouter);
 router.use("/rentals", rentalRouter);
 router.use("/password", passwordRouter);
 
-export { router };
+export { router }; 
