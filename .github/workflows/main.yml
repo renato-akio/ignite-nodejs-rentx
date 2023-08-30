@@ -10,17 +10,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./app/ignite-nodejs-rentx
-
+    
     steps:
       - uses: actions/checkout@v3
 
       - name: Setup Nodejs
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 18.x
 
       - name: Install Dependencies
         run: yarn
